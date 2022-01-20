@@ -54,4 +54,15 @@ public class DeckOfCards {
         else
             return null;
     }
+
+    /**
+     * This method will return the number of cards in the deck
+     */
+    public int getCountOfCards()
+    {
+        return deck.size();
+    }
+
+
+
 }

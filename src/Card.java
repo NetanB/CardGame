@@ -61,4 +61,38 @@ public class Card {
     {
         return Arrays.asList("2","3", "4", "5", "6", "7", "8","9", "10","jack", "queen", "king", "ace");
     }
+
+    /**
+     * This method will return a String representing the card
+     *
+     */
+    public String toString()
+    {
+        return String.format("%s of %s", faceName, suit);
+    }
+
+    /**
+     * This method will return the color of the suit
+     */
+    public String getColor()
+    {
+        if (suit.equals("hearts") || suit.equals("diamonds"))
+            return "red";
+        else
+            return "black";
+    }
+
+    /**
+     * This method will return the value of the card and assumes that "ace"
+     * is the highest card
+     * faceName: "2","3", "4", "5", "6", "7", "8","9", "10","jack", "queen", "king", "ace"
+     * index      0    1    2   3    4    5    6    7    8     9      10       11      12
+     * faceValue: 2   3    4    5    6    7    8    9   10    11      12       13      14
+     *
+     */
+
+    public int getFaceValue()
+    {
+        return getValidFaceName().indexOf(faceName)+2;
+    }
 }
